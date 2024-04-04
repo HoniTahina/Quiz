@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz/models/boutton_reponse.dart';
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key});
@@ -10,13 +11,19 @@ class QuestionScreen extends StatefulWidget {
 class _QuestionScreenState extends State<QuestionScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text('Question'),
-        // OutlinedButton(onPressed: () {}, child: Text("reponse")),
-        // OutlinedButton(onPressed: () {}, child: Text("reponse")),
-        // OutlinedButton(onPressed: () {}, child: Text("reponse")),
+        const Text(
+          'Question',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        const SizedBox(height: 30),
+        BouttonReponse(onTap: () {}, reponse: 'data 1'),
+        BouttonReponse(onTap: () {}, reponse: 'data 2'),
+        BouttonReponse(onTap: () {}, reponse: 'data 3'),
       ],
     );
   }

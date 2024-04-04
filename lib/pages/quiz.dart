@@ -27,7 +27,9 @@ class _QuizState extends State<Quiz> {
   var activeScreen = 'home';
   // ignore: non_constant_identifier_names
   void SwitchScreen() {
-    activeScreen = 'question_screen';
+    setState(() {
+      activeScreen = 'question_screen';
+    });
   }
 
   @override
